@@ -61,30 +61,12 @@ namespace DB
             }
         }
 
-        private void LoadPractitioners()
-        {
-            string query = "SELECT * FROM PRACTITIONER";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                con.Open();
-
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-
-                dataGridView2.AutoGenerateColumns = true;
-                dataGridView2.Columns.Clear();
-                dataGridView2.DataSource = table;
-            }
-        }
 
         private void showData_Click(object sender, EventArgs e)
         {
          
 
             LoadPatients();
-            LoadPractitioners();
         }
 
         private void ExecuteQuery(string query)
@@ -167,7 +149,6 @@ namespace DB
            
 
             LoadPatients();
-            LoadPractitioners();
 
         }
 
@@ -191,6 +172,13 @@ namespace DB
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void goToForm2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
         }
     }
 }

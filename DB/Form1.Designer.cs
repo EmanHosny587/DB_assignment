@@ -40,21 +40,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.hospitalDataSet1 = new DB.HospitalDataSet();
             this.hospitalDataSet2 = new DB.HospitalDataSet();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.Button();
             this.patientID_input = new System.Windows.Forms.TextBox();
             this.demographic_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.goToForm2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -145,42 +141,6 @@
             this.hospitalDataSet2.DataSetName = "HospitalDataSet";
             this.hospitalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView2.Location = new System.Drawing.Point(560, 390);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(572, 235);
-            this.dataGridView2.TabIndex = 4;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "PRACTITIONER_ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "SPECIALITY_ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "MEDICAL_EXPERTISE";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
             // Update
             // 
             this.Update.Location = new System.Drawing.Point(933, 321);
@@ -227,11 +187,22 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Dempgraphic";
             // 
+            // goToForm2
+            // 
+            this.goToForm2.Location = new System.Drawing.Point(85, 321);
+            this.goToForm2.Name = "goToForm2";
+            this.goToForm2.Size = new System.Drawing.Size(209, 38);
+            this.goToForm2.TabIndex = 10;
+            this.goToForm2.Text = "Go to form 2";
+            this.goToForm2.UseVisualStyleBackColor = true;
+            this.goToForm2.Click += new System.EventHandler(this.goToForm2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 623);
+            this.Controls.Add(this.goToForm2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.demographic_input);
@@ -240,7 +211,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.showData);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dataGridView2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -249,7 +219,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,15 +236,12 @@
         private System.Windows.Forms.Button button1;
         private HospitalDataSet hospitalDataSet1;
         private HospitalDataSet hospitalDataSet2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.TextBox patientID_input;
         private System.Windows.Forms.TextBox demographic_input;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button goToForm2;
     }
 }
 
