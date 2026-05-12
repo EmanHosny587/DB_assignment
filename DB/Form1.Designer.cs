@@ -37,6 +37,7 @@
             this.hospitalDataSet = new DB.HospitalDataSet();
             this.pATIENTTableAdapter = new DB.HospitalDataSetTableAdapters.PATIENTTableAdapter();
             this.showData = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
@@ -51,11 +52,12 @@
             this.cONTACTHISTORYDataGridViewTextBoxColumn,
             this.dEMOGRAPHICDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pATIENTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(288, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 37);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(500, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 188);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -99,21 +101,34 @@
             // 
             // showData
             // 
-            this.showData.Location = new System.Drawing.Point(629, 346);
+            this.showData.Location = new System.Drawing.Point(167, 281);
+            this.showData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(105, 23);
+            this.showData.Size = new System.Drawing.Size(79, 19);
             this.showData.TabIndex = 2;
             this.showData.Text = "show data";
             this.showData.UseVisualStyleBackColor = true;
             this.showData.Click += new System.EventHandler(this.showData_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(60, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Insert";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.insert_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.showData);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -133,6 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cONTACTHISTORYDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dEMOGRAPHICDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button showData;
+        private System.Windows.Forms.Button button1;
     }
 }
 
