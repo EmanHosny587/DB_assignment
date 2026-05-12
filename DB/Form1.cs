@@ -15,8 +15,14 @@ namespace DB
         {
             InitializeComponent();
 
-           
+            AppointmentsControl appointments = new AppointmentsControl();
+            appointments.Dock = DockStyle.Fill;
+
+            this.Controls.Clear();
+            this.Controls.Add(appointments);
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
