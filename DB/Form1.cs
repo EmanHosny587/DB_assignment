@@ -9,7 +9,7 @@ namespace DB
     public partial class Form1 : Form
     {
         string connectionString =
-            @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;Encrypt=True ;TrustServerCertificate=True";
 
         public Form1()
         {
@@ -171,6 +171,26 @@ namespace DB
 
         }
 
-       
+        private void update_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand( "Update Patient set Demographic='"+demographic_input.Text.ToString()+"'Where patient_ID='"+ patientID_input.Text.ToString()+"'",con);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Data Updated");
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
