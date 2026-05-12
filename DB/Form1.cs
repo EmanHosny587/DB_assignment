@@ -33,6 +33,18 @@ namespace DB
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+
         private void LoadPatients()
         {
             string query = "SELECT * FROM PATIENT";
@@ -49,16 +61,30 @@ namespace DB
             }
         }
 
+        private void LoadPractitioners()
+        {
+            string query = "SELECT * FROM PRACTITIONER";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                dataGridView2.AutoGenerateColumns = true;
+                dataGridView2.Columns.Clear();
+                dataGridView2.DataSource = table;
+            }
+        }
+
         private void showData_Click(object sender, EventArgs e)
         {
          
 
             LoadPatients();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            LoadPractitioners();
         }
 
         private void ExecuteQuery(string query)
@@ -91,9 +117,60 @@ namespace DB
         VALUES (105, '01005887614', 'Male, 36 years old');
     ";
 
+
+            string insertSpecialty = @"
+    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 6)
+    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
+    VALUES (6, 'Neurology');
+
+    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 7)
+    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
+    VALUES (7, 'Pediatrics');
+
+    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 8)
+    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
+    VALUES (8, 'Dermatology');
+
+    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 9)
+    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
+    VALUES (9, 'Orthopedics');
+
+    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 10)
+    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
+    VALUES (10, 'Dentistry');
+";
+
+            string insertPractitioner = @"
+    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 202)
+    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
+    VALUES (202, 6, '7 years');
+
+    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 203)
+    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
+    VALUES (203, 7, '3 years');
+
+    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 204)
+    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
+    VALUES (204, 8, '4 years');
+
+    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 205)
+    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
+    VALUES (205, 9, '10 years');
+
+    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 206)
+    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
+    VALUES (206, 10, '6 years');
+";
             ExecuteQuery(insertPatients);
+            ExecuteQuery(insertSpecialty);
+            ExecuteQuery(insertPractitioner);
+           
+
             LoadPatients();
+            LoadPractitioners();
 
         }
+
+       
     }
 }
