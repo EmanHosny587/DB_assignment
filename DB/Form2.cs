@@ -14,7 +14,7 @@ namespace DB
     public partial class Form2 : Form
     {
         string connectionString =
-           @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;Encrypt=True ;TrustServerCertificate=True";
+     @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;";
         public Form2()
         {
             InitializeComponent();
@@ -60,15 +60,59 @@ namespace DB
             this.Hide();
         }
 
+        private void LoadPractitioners()
+        {
+            string query = "SELECT * FROM PRACTITIONER";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                dataGridView1.DataSource = table;
+            }
+        }
+
+
+
         private void showData_Click(object sender, EventArgs e)
         {
-            this.pRACTITIONERTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER);
+            LoadPractitioners();
         }
 
-        private void insert_Click(object sender, EventArgs e)
-        {
+      private void insert_Click(object sender, EventArgs e)
+{
+    if (string.IsNullOrWhiteSpace(practitionerID_input.Text) ||
+        string.IsNullOrWhiteSpace(medicalExperties_input.Text))
+    {
+        MessageBox.Show("Please fill in all fields.", "Missing Data");
+        return;
+    }
 
-        }
+    using (SqlConnection con = new SqlConnection(connectionString))
+    {
+        con.Open();
+        SqlCommand cmd = new SqlCommand(@"
+            IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = @PractitionerID)
+            BEGIN
+                INSERT INTO PRACTITIONER (PRACTITIONER_ID, MEDICAL_EXPERTISE)
+                VALUES (@PractitionerID, @MedicalExpertise)
+            END", con);
+
+        cmd.Parameters.AddWithValue("@PractitionerID",   int.Parse(practitionerID_input.Text.Trim()));
+        cmd.Parameters.AddWithValue("@MedicalExpertise", medicalExperties_input.Text.Trim());
+
+        int rows = cmd.ExecuteNonQuery();
+
+        if (rows > 0)
+            MessageBox.Show("Practitioner inserted!", "Success");
+        else
+            MessageBox.Show("Practitioner ID already exists.", "Duplicate");
+    }
+}
 
         private void delete_Click(object sender, EventArgs e)
         {
@@ -88,5 +132,8 @@ namespace DB
             this.Hide();
 
         }
+
+
+      
     }
 }

@@ -9,7 +9,7 @@ namespace DB
     public partial class Form1 : Form
     {
         string connectionString =
-            @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;Encrypt=True ;TrustServerCertificate=True";
+    @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;";
 
         public Form1()
         {
@@ -85,71 +85,35 @@ namespace DB
 
         private void insert_Click(object sender, EventArgs e)
         {
-            string insertPatients = @"
-        IF NOT EXISTS (SELECT 1 FROM PATIENT WHERE PATIENT_ID = 103)
-        INSERT INTO PATIENT (PATIENT_ID, CONTACT_HISTORY, DEMOGRAPHIC)
-        VALUES (103, '01018532698', 'Male, 99 years old');
+            if (string.IsNullOrWhiteSpace(patientID_input.Text) ||
+                string.IsNullOrWhiteSpace(demographic_input.Text))
+            {
+                MessageBox.Show("Please fill in all fields.", "Missing Data");
+                return;
+            }
 
-        IF NOT EXISTS (SELECT 1 FROM PATIENT WHERE PATIENT_ID = 104)
-        INSERT INTO PATIENT (PATIENT_ID, CONTACT_HISTORY, DEMOGRAPHIC)
-        VALUES (104, '01016813826', 'Male, 48 years old');
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"
+            IF NOT EXISTS (SELECT 1 FROM PATIENT WHERE PATIENT_ID = @PatientID)
+            BEGIN
+                INSERT INTO PATIENT (PATIENT_ID, CONTACT_HISTORY, DEMOGRAPHIC)
+                VALUES (@PatientID, 'N/A', @Demographic)
+            END", con);
 
-        IF NOT EXISTS (SELECT 1 FROM PATIENT WHERE PATIENT_ID = 105)
-        INSERT INTO PATIENT (PATIENT_ID, CONTACT_HISTORY, DEMOGRAPHIC)
-        VALUES (105, '01005887614', 'Male, 36 years old');
-    ";
+                cmd.Parameters.AddWithValue("@PatientID", int.Parse(patientID_input.Text.Trim()));
+                cmd.Parameters.AddWithValue("@Demographic", demographic_input.Text.Trim());
 
+                int rows = cmd.ExecuteNonQuery();
 
-            string insertSpecialty = @"
-    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 6)
-    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
-    VALUES (6, 'Neurology');
-
-    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 7)
-    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
-    VALUES (7, 'Pediatrics');
-
-    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 8)
-    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
-    VALUES (8, 'Dermatology');
-
-    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 9)
-    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
-    VALUES (9, 'Orthopedics');
-
-    IF NOT EXISTS (SELECT 1 FROM SPECIALITY WHERE SPECIALITY_ID = 10)
-    INSERT INTO SPECIALITY (SPECIALITY_ID, SPECIALITY_NAME)
-    VALUES (10, 'Dentistry');
-";
-
-            string insertPractitioner = @"
-    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 202)
-    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
-    VALUES (202, 6, '7 years');
-
-    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 203)
-    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
-    VALUES (203, 7, '3 years');
-
-    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 204)
-    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
-    VALUES (204, 8, '4 years');
-
-    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 205)
-    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
-    VALUES (205, 9, '10 years');
-
-    IF NOT EXISTS (SELECT 1 FROM PRACTITIONER WHERE PRACTITIONER_ID = 206)
-    INSERT INTO PRACTITIONER (PRACTITIONER_ID, SPECIALITY_ID, MEDICAL_EXPERTISE)
-    VALUES (206, 10, '6 years');
-";
-            ExecuteQuery(insertPatients);
-            ExecuteQuery(insertSpecialty);
-            ExecuteQuery(insertPractitioner);
-           
+                if (rows > 0)
+                    MessageBox.Show("Patient inserted!", "Success");
+                else
+                    MessageBox.Show("Patient ID already exists.", "Duplicate");
+            }
 
             LoadPatients();
-
         }
 
         private void update_Click(object sender, EventArgs e)
