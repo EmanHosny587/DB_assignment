@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.Label sPECIALITY_IDLabel;
+            System.Windows.Forms.Label sPECIALITY_NAMELabel;
             this.hospitalDataSet = new DB.HospitalDataSet();
-            this.iS_SCHEDULEDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iS_SCHEDULEDTableAdapter = new DB.HospitalDataSetTableAdapters.IS_SCHEDULEDTableAdapter();
+            this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sPECIALITYTableAdapter = new DB.HospitalDataSetTableAdapters.SPECIALITYTableAdapter();
             this.tableAdapterManager = new DB.HospitalDataSetTableAdapters.TableAdapterManager();
-            this.iS_SCHEDULEDBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.sPECIALITYBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,17 +48,25 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.iS_SCHEDULEDBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.pRACTITIONER_BRANCHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRACTITIONER_BRANCHTableAdapter = new DB.HospitalDataSetTableAdapters.PRACTITIONER_BRANCHTableAdapter();
-            this.pATIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pATIENTTableAdapter = new DB.HospitalDataSetTableAdapters.PATIENTTableAdapter();
+            this.sPECIALITYBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.sPECIALITY_IDTextBox = new System.Windows.Forms.TextBox();
+            this.sPECIALITY_NAMETextBox = new System.Windows.Forms.TextBox();
+            this.pRACTITIONERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRACTITIONERTableAdapter = new DB.HospitalDataSetTableAdapters.PRACTITIONERTableAdapter();
+            this.pRACTITIONERDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKPRACTITIHASASPECIALIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            sPECIALITY_IDLabel = new System.Windows.Forms.Label();
+            sPECIALITY_NAMELabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS_SCHEDULEDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS_SCHEDULEDBindingNavigator)).BeginInit();
-            this.iS_SCHEDULEDBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONER_BRANCHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingNavigator)).BeginInit();
+            this.sPECIALITYBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPRACTITIHASASPECIALIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // hospitalDataSet
@@ -64,39 +74,39 @@
             this.hospitalDataSet.DataSetName = "HospitalDataSet";
             this.hospitalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // iS_SCHEDULEDBindingSource
+            // sPECIALITYBindingSource
             // 
-            this.iS_SCHEDULEDBindingSource.DataMember = "IS_SCHEDULED";
-            this.iS_SCHEDULEDBindingSource.DataSource = this.hospitalDataSet;
+            this.sPECIALITYBindingSource.DataMember = "SPECIALITY";
+            this.sPECIALITYBindingSource.DataSource = this.hospitalDataSet;
             // 
-            // iS_SCHEDULEDTableAdapter
+            // sPECIALITYTableAdapter
             // 
-            this.iS_SCHEDULEDTableAdapter.ClearBeforeFill = true;
+            this.sPECIALITYTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CLINICAL_SUMMARYTableAdapter = null;
-            this.tableAdapterManager.IS_SCHEDULEDTableAdapter = this.iS_SCHEDULEDTableAdapter;
+            this.tableAdapterManager.IS_SCHEDULEDTableAdapter = null;
             this.tableAdapterManager.MEDICAL_FACILITY_BRANCHTableAdapter = null;
             this.tableAdapterManager.MEDICATIONTableAdapter = null;
-            this.tableAdapterManager.PATIENTTableAdapter = this.pATIENTTableAdapter;
-            this.tableAdapterManager.PRACTITIONER_BRANCHTableAdapter = this.pRACTITIONER_BRANCHTableAdapter;
-            this.tableAdapterManager.PRACTITIONERTableAdapter = null;
+            this.tableAdapterManager.PATIENTTableAdapter = null;
+            this.tableAdapterManager.PRACTITIONER_BRANCHTableAdapter = null;
+            this.tableAdapterManager.PRACTITIONERTableAdapter = this.pRACTITIONERTableAdapter;
             this.tableAdapterManager.PRESCRIBEDINTableAdapter = null;
             this.tableAdapterManager.PRESCRIPTIONTableAdapter = null;
             this.tableAdapterManager.REGIONAL_HEALTHCARE_PROVIDERTableAdapter = null;
-            this.tableAdapterManager.SPECIALITYTableAdapter = null;
+            this.tableAdapterManager.SPECIALITYTableAdapter = this.sPECIALITYTableAdapter;
             this.tableAdapterManager.UpdateOrder = DB.HospitalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // iS_SCHEDULEDBindingNavigator
+            // sPECIALITYBindingNavigator
             // 
-            this.iS_SCHEDULEDBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.iS_SCHEDULEDBindingNavigator.BindingSource = this.iS_SCHEDULEDBindingSource;
-            this.iS_SCHEDULEDBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.iS_SCHEDULEDBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.iS_SCHEDULEDBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.iS_SCHEDULEDBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sPECIALITYBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.sPECIALITYBindingNavigator.BindingSource = this.sPECIALITYBindingSource;
+            this.sPECIALITYBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.sPECIALITYBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.sPECIALITYBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.sPECIALITYBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -108,17 +118,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.iS_SCHEDULEDBindingNavigatorSaveItem});
-            this.iS_SCHEDULEDBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.iS_SCHEDULEDBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.iS_SCHEDULEDBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.iS_SCHEDULEDBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.iS_SCHEDULEDBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.iS_SCHEDULEDBindingNavigator.Name = "iS_SCHEDULEDBindingNavigator";
-            this.iS_SCHEDULEDBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.iS_SCHEDULEDBindingNavigator.Size = new System.Drawing.Size(800, 27);
-            this.iS_SCHEDULEDBindingNavigator.TabIndex = 0;
-            this.iS_SCHEDULEDBindingNavigator.Text = "bindingNavigator1";
+            this.sPECIALITYBindingNavigatorSaveItem});
+            this.sPECIALITYBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.sPECIALITYBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.sPECIALITYBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.sPECIALITYBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.sPECIALITYBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.sPECIALITYBindingNavigator.Name = "sPECIALITYBindingNavigator";
+            this.sPECIALITYBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.sPECIALITYBindingNavigator.Size = new System.Drawing.Size(800, 27);
+            this.sPECIALITYBindingNavigator.TabIndex = 0;
+            this.sPECIALITYBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -205,49 +215,125 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // iS_SCHEDULEDBindingNavigatorSaveItem
+            // sPECIALITYBindingNavigatorSaveItem
             // 
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("iS_SCHEDULEDBindingNavigatorSaveItem.Image")));
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.Name = "iS_SCHEDULEDBindingNavigatorSaveItem";
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.Text = "Save Data";
-            this.iS_SCHEDULEDBindingNavigatorSaveItem.Click += new System.EventHandler(this.iS_SCHEDULEDBindingNavigatorSaveItem_Click);
+            this.sPECIALITYBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.sPECIALITYBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sPECIALITYBindingNavigatorSaveItem.Image")));
+            this.sPECIALITYBindingNavigatorSaveItem.Name = "sPECIALITYBindingNavigatorSaveItem";
+            this.sPECIALITYBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.sPECIALITYBindingNavigatorSaveItem.Text = "Save Data";
+            this.sPECIALITYBindingNavigatorSaveItem.Click += new System.EventHandler(this.sPECIALITYBindingNavigatorSaveItem_Click);
             // 
-            // pRACTITIONER_BRANCHBindingSource
+            // sPECIALITY_IDLabel
             // 
-            this.pRACTITIONER_BRANCHBindingSource.DataMember = "PRACTITIONER_BRANCH";
-            this.pRACTITIONER_BRANCHBindingSource.DataSource = this.hospitalDataSet;
+            sPECIALITY_IDLabel.AutoSize = true;
+            sPECIALITY_IDLabel.Location = new System.Drawing.Point(268, 63);
+            sPECIALITY_IDLabel.Name = "sPECIALITY_IDLabel";
+            sPECIALITY_IDLabel.Size = new System.Drawing.Size(102, 16);
+            sPECIALITY_IDLabel.TabIndex = 1;
+            sPECIALITY_IDLabel.Text = "SPECIALITY ID:";
             // 
-            // pRACTITIONER_BRANCHTableAdapter
+            // sPECIALITY_IDTextBox
             // 
-            this.pRACTITIONER_BRANCHTableAdapter.ClearBeforeFill = true;
+            this.sPECIALITY_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_ID", true));
+            this.sPECIALITY_IDTextBox.Location = new System.Drawing.Point(402, 60);
+            this.sPECIALITY_IDTextBox.Name = "sPECIALITY_IDTextBox";
+            this.sPECIALITY_IDTextBox.Size = new System.Drawing.Size(100, 22);
+            this.sPECIALITY_IDTextBox.TabIndex = 2;
             // 
-            // pATIENTBindingSource
+            // sPECIALITY_NAMELabel
             // 
-            this.pATIENTBindingSource.DataMember = "PATIENT";
-            this.pATIENTBindingSource.DataSource = this.hospitalDataSet;
+            sPECIALITY_NAMELabel.AutoSize = true;
+            sPECIALITY_NAMELabel.Location = new System.Drawing.Point(268, 91);
+            sPECIALITY_NAMELabel.Name = "sPECIALITY_NAMELabel";
+            sPECIALITY_NAMELabel.Size = new System.Drawing.Size(128, 16);
+            sPECIALITY_NAMELabel.TabIndex = 3;
+            sPECIALITY_NAMELabel.Text = "SPECIALITY NAME:";
             // 
-            // pATIENTTableAdapter
+            // sPECIALITY_NAMETextBox
             // 
-            this.pATIENTTableAdapter.ClearBeforeFill = true;
+            this.sPECIALITY_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_NAME", true));
+            this.sPECIALITY_NAMETextBox.Location = new System.Drawing.Point(402, 88);
+            this.sPECIALITY_NAMETextBox.Name = "sPECIALITY_NAMETextBox";
+            this.sPECIALITY_NAMETextBox.Size = new System.Drawing.Size(100, 22);
+            this.sPECIALITY_NAMETextBox.TabIndex = 4;
+            // 
+            // pRACTITIONERBindingSource
+            // 
+            this.pRACTITIONERBindingSource.DataMember = "PRACTITIONER";
+            this.pRACTITIONERBindingSource.DataSource = this.hospitalDataSet;
+            // 
+            // pRACTITIONERTableAdapter
+            // 
+            this.pRACTITIONERTableAdapter.ClearBeforeFill = true;
+            // 
+            // pRACTITIONERDataGridView
+            // 
+            this.pRACTITIONERDataGridView.AutoGenerateColumns = false;
+            this.pRACTITIONERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pRACTITIONERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.pRACTITIONERDataGridView.DataSource = this.fKPRACTITIHASASPECIALIBindingSource;
+            this.pRACTITIONERDataGridView.Location = new System.Drawing.Point(142, 144);
+            this.pRACTITIONERDataGridView.Name = "pRACTITIONERDataGridView";
+            this.pRACTITIONERDataGridView.RowHeadersWidth = 51;
+            this.pRACTITIONERDataGridView.RowTemplate.Height = 24;
+            this.pRACTITIONERDataGridView.Size = new System.Drawing.Size(496, 175);
+            this.pRACTITIONERDataGridView.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PRACTITIONER_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PRACTITIONER_ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SPECIALITY_ID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "SPECIALITY_ID";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "MEDICAL_EXPERTISE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "MEDICAL_EXPERTISE";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // fKPRACTITIHASASPECIALIBindingSource
+            // 
+            this.fKPRACTITIHASASPECIALIBindingSource.DataMember = "FK_PRACTITI_HASA_SPECIALI";
+            this.fKPRACTITIHASASPECIALIBindingSource.DataSource = this.sPECIALITYBindingSource;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.iS_SCHEDULEDBindingNavigator);
+            this.Controls.Add(this.pRACTITIONERDataGridView);
+            this.Controls.Add(sPECIALITY_IDLabel);
+            this.Controls.Add(this.sPECIALITY_IDTextBox);
+            this.Controls.Add(sPECIALITY_NAMELabel);
+            this.Controls.Add(this.sPECIALITY_NAMETextBox);
+            this.Controls.Add(this.sPECIALITYBindingNavigator);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS_SCHEDULEDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iS_SCHEDULEDBindingNavigator)).EndInit();
-            this.iS_SCHEDULEDBindingNavigator.ResumeLayout(false);
-            this.iS_SCHEDULEDBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONER_BRANCHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingNavigator)).EndInit();
+            this.sPECIALITYBindingNavigator.ResumeLayout(false);
+            this.sPECIALITYBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPRACTITIHASASPECIALIBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,10 +342,10 @@
         #endregion
 
         private HospitalDataSet hospitalDataSet;
-        private System.Windows.Forms.BindingSource iS_SCHEDULEDBindingSource;
-        private HospitalDataSetTableAdapters.IS_SCHEDULEDTableAdapter iS_SCHEDULEDTableAdapter;
+        private System.Windows.Forms.BindingSource sPECIALITYBindingSource;
+        private HospitalDataSetTableAdapters.SPECIALITYTableAdapter sPECIALITYTableAdapter;
         private HospitalDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator iS_SCHEDULEDBindingNavigator;
+        private System.Windows.Forms.BindingNavigator sPECIALITYBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -271,10 +357,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton iS_SCHEDULEDBindingNavigatorSaveItem;
-        private HospitalDataSetTableAdapters.PRACTITIONER_BRANCHTableAdapter pRACTITIONER_BRANCHTableAdapter;
-        private System.Windows.Forms.BindingSource pRACTITIONER_BRANCHBindingSource;
-        private HospitalDataSetTableAdapters.PATIENTTableAdapter pATIENTTableAdapter;
-        private System.Windows.Forms.BindingSource pATIENTBindingSource;
+        private System.Windows.Forms.ToolStripButton sPECIALITYBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox sPECIALITY_IDTextBox;
+        private System.Windows.Forms.TextBox sPECIALITY_NAMETextBox;
+        private HospitalDataSetTableAdapters.PRACTITIONERTableAdapter pRACTITIONERTableAdapter;
+        private System.Windows.Forms.BindingSource pRACTITIONERBindingSource;
+        private System.Windows.Forms.DataGridView pRACTITIONERDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource fKPRACTITIHASASPECIALIBindingSource;
     }
 }

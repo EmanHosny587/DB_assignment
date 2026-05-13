@@ -46,6 +46,8 @@
             this.showData = new System.Windows.Forms.Button();
             this.insert = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Speciality = new System.Windows.Forms.TextBox();
             goToForm1 = new System.Windows.Forms.Button();
             goToForm3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,6 +64,16 @@
             goToForm1.Text = "Go to form 1";
             goToForm1.UseVisualStyleBackColor = true;
             goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
+            // 
+            // goToForm3
+            // 
+            goToForm3.Location = new System.Drawing.Point(12, 470);
+            goToForm3.Name = "goToForm3";
+            goToForm3.Size = new System.Drawing.Size(167, 38);
+            goToForm3.TabIndex = 15;
+            goToForm3.Text = "Go to form 3";
+            goToForm3.UseVisualStyleBackColor = true;
+            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
             // 
             // dataGridView1
             // 
@@ -141,7 +153,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 193);
+            this.label2.Location = new System.Drawing.Point(88, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 8;
@@ -158,7 +170,7 @@
             // 
             // medicalExperties_input
             // 
-            this.medicalExperties_input.Location = new System.Drawing.Point(234, 190);
+            this.medicalExperties_input.Location = new System.Drawing.Point(234, 171);
             this.medicalExperties_input.Name = "medicalExperties_input";
             this.medicalExperties_input.Size = new System.Drawing.Size(100, 22);
             this.medicalExperties_input.TabIndex = 10;
@@ -195,21 +207,31 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // goToForm3
+            // label3
             // 
-            goToForm3.Location = new System.Drawing.Point(12, 470);
-            goToForm3.Name = "goToForm3";
-            goToForm3.Size = new System.Drawing.Size(167, 38);
-            goToForm3.TabIndex = 15;
-            goToForm3.Text = "Go to form 3";
-            goToForm3.UseVisualStyleBackColor = true;
-            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(138, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Specialty";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // speciality
+            // 
+            this.Speciality.Location = new System.Drawing.Point(234, 207);
+            this.Speciality.Name = "speciality";
+            this.Speciality.Size = new System.Drawing.Size(100, 22);
+            this.Speciality.TabIndex = 17;
+            this.Speciality.TextChanged += new System.EventHandler(this.Speciality_TextChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 633);
+            this.Controls.Add(this.Speciality);
+            this.Controls.Add(this.label3);
             this.Controls.Add(goToForm3);
             this.Controls.Add(this.delete);
             this.Controls.Add(goToForm1);
@@ -249,5 +271,7 @@
         private System.Windows.Forms.Button showData;
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Speciality;
     }
 }

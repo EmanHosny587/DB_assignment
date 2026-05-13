@@ -17,22 +17,20 @@ namespace DB
             InitializeComponent();
         }
 
-        private void iS_SCHEDULEDBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void sPECIALITYBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.iS_SCHEDULEDBindingSource.EndEdit();
+            this.sPECIALITYBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.hospitalDataSet);
 
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitalDataSet.PATIENT' table. You can move, or remove it, as needed.
-            this.pATIENTTableAdapter.Fill(this.hospitalDataSet.PATIENT);
-            // TODO: This line of code loads data into the 'hospitalDataSet.PRACTITIONER_BRANCH' table. You can move, or remove it, as needed.
-            this.pRACTITIONER_BRANCHTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER_BRANCH);
-            // TODO: This line of code loads data into the 'hospitalDataSet.IS_SCHEDULED' table. You can move, or remove it, as needed.
-            this.iS_SCHEDULEDTableAdapter.Fill(this.hospitalDataSet.IS_SCHEDULED);
+            // TODO: This line of code loads data into the 'hospitalDataSet.PRACTITIONER' table. You can move, or remove it, as needed.
+            this.pRACTITIONERTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER);
+            // TODO: This line of code loads data into the 'hospitalDataSet.SPECIALITY' table. You can move, or remove it, as needed.
+            this.sPECIALITYTableAdapter.Fill(this.hospitalDataSet.SPECIALITY);
 
         }
     }

@@ -9,7 +9,7 @@ namespace DB
     public partial class Form1 : Form
     {
         string connectionString =
-    @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;";
+    @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
 
         public Form1()
         {
@@ -125,6 +125,7 @@ namespace DB
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Data Updated");
+            LoadPatients();
 
         }
 
