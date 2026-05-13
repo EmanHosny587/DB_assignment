@@ -40,18 +40,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.hospitalDataSet1 = new DB.HospitalDataSet();
             this.hospitalDataSet2 = new DB.HospitalDataSet();
-            this.Update = new System.Windows.Forms.Button();
-            this.patientID_input = new System.Windows.Forms.TextBox();
-            this.demographic_input = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.goToForm2 = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,12 +61,12 @@
             this.cONTACTHISTORYDataGridViewTextBoxColumn,
             this.dEMOGRAPHICDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pATIENTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(560, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(420, 51);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 188);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -112,10 +110,10 @@
             // 
             // showData
             // 
-            this.showData.Location = new System.Drawing.Point(969, 324);
-            this.showData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.showData.Location = new System.Drawing.Point(63, 163);
+            this.showData.Margin = new System.Windows.Forms.Padding(2);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(182, 42);
+            this.showData.Size = new System.Drawing.Size(160, 76);
             this.showData.TabIndex = 2;
             this.showData.Text = "show data";
             this.showData.UseVisualStyleBackColor = true;
@@ -123,10 +121,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(492, 326);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(63, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 39);
+            this.button1.Size = new System.Drawing.Size(160, 66);
             this.button1.TabIndex = 3;
             this.button1.Text = "Insert";
             this.button1.UseVisualStyleBackColor = true;
@@ -142,88 +139,44 @@
             this.hospitalDataSet2.DataSetName = "HospitalDataSet";
             this.hospitalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Update
+            // dataGridView2
             // 
-            this.Update.Location = new System.Drawing.Point(737, 324);
-            this.Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(182, 42);
-            this.Update.TabIndex = 5;
-            this.Update.Text = "update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.update_Click);
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView2.Location = new System.Drawing.Point(420, 281);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(429, 191);
+            this.dataGridView2.TabIndex = 4;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // patientID_input
+            // Column1
             // 
-            this.patientID_input.Location = new System.Drawing.Point(359, 68);
-            this.patientID_input.Name = "patientID_input";
-            this.patientID_input.Size = new System.Drawing.Size(129, 22);
-            this.patientID_input.TabIndex = 6;
-            this.patientID_input.Text = " ";
-            this.patientID_input.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Column1.HeaderText = "PRACTITIONER_ID";
+            this.Column1.Name = "Column1";
             // 
-            // demographic_input
+            // Column2
             // 
-            this.demographic_input.Location = new System.Drawing.Point(359, 121);
-            this.demographic_input.Name = "demographic_input";
-            this.demographic_input.Size = new System.Drawing.Size(129, 22);
-            this.demographic_input.TabIndex = 7;
+            this.Column2.HeaderText = "SPECIALITY_ID";
+            this.Column2.Name = "Column2";
             // 
-            // label1
+            // Column3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(269, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "paitent id";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Dempgraphic";
-            // 
-            // goToForm2
-            // 
-            this.goToForm2.Location = new System.Drawing.Point(36, 326);
-            this.goToForm2.Name = "goToForm2";
-            this.goToForm2.Size = new System.Drawing.Size(182, 38);
-            this.goToForm2.TabIndex = 10;
-            this.goToForm2.Text = "Go to form 2";
-            this.goToForm2.UseVisualStyleBackColor = true;
-            this.goToForm2.Click += new System.EventHandler(this.goToForm2_Click);
-            // 
-            // delete
-            // 
-            this.delete.Location = new System.Drawing.Point(272, 326);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(182, 40);
-            this.delete.TabIndex = 11;
-            this.delete.Text = "Delete";
-            this.delete.UseVisualStyleBackColor = true;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.Column3.HeaderText = "MEDICAL_EXPERTISE";
+            this.Column3.Name = "Column3";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 623);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.goToForm2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.demographic_input);
-            this.Controls.Add(this.patientID_input);
-            this.Controls.Add(this.Update);
+            this.ClientSize = new System.Drawing.Size(888, 506);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.showData);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.dataGridView2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -231,8 +184,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -248,13 +201,10 @@
         private System.Windows.Forms.Button button1;
         private HospitalDataSet hospitalDataSet1;
         private HospitalDataSet hospitalDataSet2;
-        private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.TextBox patientID_input;
-        private System.Windows.Forms.TextBox demographic_input;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button goToForm2;
-        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 

@@ -1,0 +1,10 @@
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\bin\Debug\DB.exe.config
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\bin\Debug\DB.exe
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\bin\Debug\DB.pdb
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.csproj.AssemblyReference.cache
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.Form1.resources
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.Properties.Resources.resources
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.csproj.GenerateResource.cache
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.exe
+D:\database\ass1-phase1\assignment_GUI\guiUsingC#\DB\obj\Debug\DB.pdb
