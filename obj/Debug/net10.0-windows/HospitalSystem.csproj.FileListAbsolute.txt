@@ -1,0 +1,14 @@
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.AssemblyInfoInputs.cache
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.AssemblyInfo.cs
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.csproj.CoreCompileInputs.cache
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\bin\Debug\net10.0-windows\HospitalSystem.exe
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\bin\Debug\net10.0-windows\HospitalSystem.deps.json
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\bin\Debug\net10.0-windows\HospitalSystem.runtimeconfig.json
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\bin\Debug\net10.0-windows\HospitalSystem.dll
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\bin\Debug\net10.0-windows\HospitalSystem.pdb
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.dll
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\refint\HospitalSystem.dll
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.pdb
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\HospitalSystem.genruntimeconfig.cache
+D:\database\ass1-phase1\assignment_GUI\HospitalSystem\obj\Debug\net10.0-windows\ref\HospitalSystem.dll
