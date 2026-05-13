@@ -156,5 +156,39 @@ namespace DB
             con.Close();
             MessageBox.Show("Data Deleted");
         }
+
+        private void goToForm3_Click(object sender, EventArgs e)
+        {
+            Form3 form= new Form3();
+            form.Show();
+            this.Hide();
+        }
+
+        private void demographic_input_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goToForm4_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+            this.Hide();
+        }
     }
 }

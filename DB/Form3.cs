@@ -44,6 +44,37 @@ namespace DB
             }
         }
 
+        private void pRACTITIONERDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goToForm1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void goToForm3_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Form4 form4 = new Form4();
+            //form4.Show();
+            //this.Hide();
+        }
+
 
 
         private void goToForm4_Click(object sender, EventArgs e)
@@ -51,7 +82,7 @@ namespace DB
             Form4 form4 = new Form4();
             form4.Show();
 
-            
+
             this.Hide();
         }
     }

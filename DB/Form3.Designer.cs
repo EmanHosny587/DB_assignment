@@ -32,6 +32,9 @@
             System.Windows.Forms.Label sPECIALITY_IDLabel;
             System.Windows.Forms.Label sPECIALITY_NAMELabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.Button button1;
+            System.Windows.Forms.Button goToForm3;
+            System.Windows.Forms.Button goToForm1;
             this.hospitalDataSet = new DB.HospitalDataSet();
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sPECIALITYTableAdapter = new DB.HospitalDataSetTableAdapters.SPECIALITYTableAdapter();
@@ -54,13 +57,16 @@
             this.sPECIALITY_NAMETextBox = new System.Windows.Forms.TextBox();
             this.pRACTITIONERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRACTITIONERDataGridView = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKPRACTITIHASASPECIALIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             sPECIALITY_IDLabel = new System.Windows.Forms.Label();
             sPECIALITY_NAMELabel = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            goToForm3 = new System.Windows.Forms.Button();
+            goToForm1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingNavigator)).BeginInit();
@@ -72,21 +78,21 @@
             // 
             // sPECIALITY_IDLabel
             // 
+            sPECIALITY_IDLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             sPECIALITY_IDLabel.AutoSize = true;
-            sPECIALITY_IDLabel.Location = new System.Drawing.Point(201, 51);
-            sPECIALITY_IDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sPECIALITY_IDLabel.Location = new System.Drawing.Point(619, 219);
             sPECIALITY_IDLabel.Name = "sPECIALITY_IDLabel";
-            sPECIALITY_IDLabel.Size = new System.Drawing.Size(85, 13);
+            sPECIALITY_IDLabel.Size = new System.Drawing.Size(116, 16);
             sPECIALITY_IDLabel.TabIndex = 1;
             sPECIALITY_IDLabel.Text = "SPECIALITY ID:";
             // 
             // sPECIALITY_NAMELabel
             // 
+            sPECIALITY_NAMELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             sPECIALITY_NAMELabel.AutoSize = true;
-            sPECIALITY_NAMELabel.Location = new System.Drawing.Point(201, 74);
-            sPECIALITY_NAMELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sPECIALITY_NAMELabel.Location = new System.Drawing.Point(619, 247);
             sPECIALITY_NAMELabel.Name = "sPECIALITY_NAMELabel";
-            sPECIALITY_NAMELabel.Size = new System.Drawing.Size(105, 13);
+            sPECIALITY_NAMELabel.Size = new System.Drawing.Size(144, 16);
             sPECIALITY_NAMELabel.TabIndex = 3;
             sPECIALITY_NAMELabel.Text = "SPECIALITY NAME:";
             // 
@@ -151,7 +157,7 @@
             this.sPECIALITYBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.sPECIALITYBindingNavigator.Name = "sPECIALITYBindingNavigator";
             this.sPECIALITYBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sPECIALITYBindingNavigator.Size = new System.Drawing.Size(738, 27);
+            this.sPECIALITYBindingNavigator.Size = new System.Drawing.Size(1475, 27);
             this.sPECIALITYBindingNavigator.TabIndex = 0;
             this.sPECIALITYBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -161,13 +167,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -177,7 +183,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -186,7 +192,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -195,7 +201,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
@@ -209,7 +215,7 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(55, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -224,7 +230,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -233,7 +239,7 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
@@ -246,26 +252,28 @@
             this.sPECIALITYBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.sPECIALITYBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sPECIALITYBindingNavigatorSaveItem.Image")));
             this.sPECIALITYBindingNavigatorSaveItem.Name = "sPECIALITYBindingNavigatorSaveItem";
-            this.sPECIALITYBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.sPECIALITYBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.sPECIALITYBindingNavigatorSaveItem.Text = "Save Data";
             this.sPECIALITYBindingNavigatorSaveItem.Click += new System.EventHandler(this.sPECIALITYBindingNavigatorSaveItem_Click);
             // 
             // sPECIALITY_IDTextBox
             // 
+            this.sPECIALITY_IDTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sPECIALITY_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_ID", true));
-            this.sPECIALITY_IDTextBox.Location = new System.Drawing.Point(302, 49);
-            this.sPECIALITY_IDTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sPECIALITY_IDTextBox.Location = new System.Drawing.Point(771, 216);
+            this.sPECIALITY_IDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sPECIALITY_IDTextBox.Name = "sPECIALITY_IDTextBox";
-            this.sPECIALITY_IDTextBox.Size = new System.Drawing.Size(76, 20);
+            this.sPECIALITY_IDTextBox.Size = new System.Drawing.Size(112, 22);
             this.sPECIALITY_IDTextBox.TabIndex = 2;
             // 
             // sPECIALITY_NAMETextBox
             // 
+            this.sPECIALITY_NAMETextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sPECIALITY_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_NAME", true));
-            this.sPECIALITY_NAMETextBox.Location = new System.Drawing.Point(302, 72);
-            this.sPECIALITY_NAMETextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sPECIALITY_NAMETextBox.Location = new System.Drawing.Point(771, 245);
+            this.sPECIALITY_NAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sPECIALITY_NAMETextBox.Name = "sPECIALITY_NAMETextBox";
-            this.sPECIALITY_NAMETextBox.Size = new System.Drawing.Size(76, 20);
+            this.sPECIALITY_NAMETextBox.Size = new System.Drawing.Size(112, 22);
             this.sPECIALITY_NAMETextBox.TabIndex = 4;
             // 
             // pRACTITIONERBindingSource
@@ -275,20 +283,70 @@
             // 
             // pRACTITIONERDataGridView
             // 
+            this.pRACTITIONERDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pRACTITIONERDataGridView.AutoGenerateColumns = false;
+            this.pRACTITIONERDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.pRACTITIONERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pRACTITIONERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.pRACTITIONERDataGridView.DataSource = this.fKPRACTITIHASASPECIALIBindingSource;
-            this.pRACTITIONERDataGridView.Location = new System.Drawing.Point(106, 117);
-            this.pRACTITIONERDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.pRACTITIONERDataGridView.Location = new System.Drawing.Point(388, 305);
+            this.pRACTITIONERDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pRACTITIONERDataGridView.Name = "pRACTITIONERDataGridView";
             this.pRACTITIONERDataGridView.RowHeadersWidth = 51;
             this.pRACTITIONERDataGridView.RowTemplate.Height = 24;
-            this.pRACTITIONERDataGridView.Size = new System.Drawing.Size(583, 177);
+            this.pRACTITIONERDataGridView.Size = new System.Drawing.Size(693, 135);
             this.pRACTITIONERDataGridView.TabIndex = 5;
+            this.pRACTITIONERDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pRACTITIONERDataGridView_CellContentClick);
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            button1.Location = new System.Drawing.Point(33, 200);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(186, 38);
+            button1.TabIndex = 21;
+            button1.Text = "Go to form 4";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // goToForm3
+            // 
+            goToForm3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm3.Location = new System.Drawing.Point(33, 125);
+            goToForm3.Name = "goToForm3";
+            goToForm3.Size = new System.Drawing.Size(186, 38);
+            goToForm3.TabIndex = 20;
+            goToForm3.Text = "Go to form 2";
+            goToForm3.UseVisualStyleBackColor = false;
+            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
+            // 
+            // goToForm1
+            // 
+            goToForm1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm1.Location = new System.Drawing.Point(33, 53);
+            goToForm1.Name = "goToForm1";
+            goToForm1.Size = new System.Drawing.Size(186, 38);
+            goToForm1.TabIndex = 19;
+            goToForm1.Text = "Go to form 1";
+            goToForm1.UseVisualStyleBackColor = false;
+            goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(347, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(939, 72);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Select from Practitioner filterd by speciality";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -296,7 +354,6 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "PRACTITIONER_ID";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -304,7 +361,6 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "SPECIALITY_ID";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -312,36 +368,30 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "MEDICAL_EXPERTISE";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // fKPRACTITIHASASPECIALIBindingSource
             // 
             this.fKPRACTITIHASASPECIALIBindingSource.DataMember = "FK_PRACTITI_HASA_SPECIALI";
             this.fKPRACTITIHASASPECIALIBindingSource.DataSource = this.sPECIALITYBindingSource;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(236, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "go to form 4";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.goToForm4_Click);
-            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 366);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1475, 649);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(button1);
+            this.Controls.Add(goToForm3);
+            this.Controls.Add(goToForm1);
             this.Controls.Add(this.pRACTITIONERDataGridView);
             this.Controls.Add(sPECIALITY_IDLabel);
             this.Controls.Add(this.sPECIALITY_IDTextBox);
             this.Controls.Add(sPECIALITY_NAMELabel);
             this.Controls.Add(this.sPECIALITY_NAMETextBox);
             this.Controls.Add(this.sPECIALITYBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -386,6 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource fKPRACTITIHASASPECIALIBindingSource;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }
