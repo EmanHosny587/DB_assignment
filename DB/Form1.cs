@@ -180,5 +180,16 @@ namespace DB
             form2.Show();
             this.Hide();
         }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Patient Where patient_ID='" + patientID_input.Text.ToString() + "'", con);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Data Deleted");
+        }
     }
 }

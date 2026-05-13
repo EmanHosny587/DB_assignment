@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.goToForm2 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
@@ -67,7 +68,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(572, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(591, 231);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -111,10 +112,10 @@
             // 
             // showData
             // 
-            this.showData.Location = new System.Drawing.Point(640, 321);
+            this.showData.Location = new System.Drawing.Point(969, 324);
             this.showData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(213, 42);
+            this.showData.Size = new System.Drawing.Size(182, 42);
             this.showData.TabIndex = 2;
             this.showData.Text = "show data";
             this.showData.UseVisualStyleBackColor = true;
@@ -122,10 +123,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(359, 321);
+            this.button1.Location = new System.Drawing.Point(492, 326);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 39);
+            this.button1.Size = new System.Drawing.Size(182, 39);
             this.button1.TabIndex = 3;
             this.button1.Text = "Insert";
             this.button1.UseVisualStyleBackColor = true;
@@ -143,10 +144,10 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(933, 321);
+            this.Update.Location = new System.Drawing.Point(737, 324);
             this.Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(199, 42);
+            this.Update.Size = new System.Drawing.Size(182, 42);
             this.Update.TabIndex = 5;
             this.Update.Text = "update";
             this.Update.UseVisualStyleBackColor = true;
@@ -189,19 +190,30 @@
             // 
             // goToForm2
             // 
-            this.goToForm2.Location = new System.Drawing.Point(85, 321);
+            this.goToForm2.Location = new System.Drawing.Point(36, 326);
             this.goToForm2.Name = "goToForm2";
-            this.goToForm2.Size = new System.Drawing.Size(209, 38);
+            this.goToForm2.Size = new System.Drawing.Size(182, 38);
             this.goToForm2.TabIndex = 10;
             this.goToForm2.Text = "Go to form 2";
             this.goToForm2.UseVisualStyleBackColor = true;
             this.goToForm2.Click += new System.EventHandler(this.goToForm2_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(272, 326);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(182, 40);
+            this.delete.TabIndex = 11;
+            this.delete.Text = "Delete";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 623);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.goToForm2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -242,6 +254,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button goToForm2;
+        private System.Windows.Forms.Button delete;
     }
 }
 

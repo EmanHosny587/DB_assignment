@@ -69,5 +69,24 @@ namespace DB
         {
 
         }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Practitioner Where Practitioner_ID='" + practitionerID_input.Text.ToString() + "'", con);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Data Deleted");
+        }
+
+        private void goToForm3_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
+
+        }
     }
 }

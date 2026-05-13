@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button goToForm1;
+            System.Windows.Forms.Button goToForm3;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pRACTITIONERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPECIALITYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,9 @@
             this.medicalExperties_input = new System.Windows.Forms.TextBox();
             this.showData = new System.Windows.Forms.Button();
             this.insert = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             goToForm1 = new System.Windows.Forms.Button();
+            goToForm3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
@@ -52,9 +55,9 @@
             // 
             // goToForm1
             // 
-            goToForm1.Location = new System.Drawing.Point(-4, 441);
+            goToForm1.Location = new System.Drawing.Point(12, 426);
             goToForm1.Name = "goToForm1";
-            goToForm1.Size = new System.Drawing.Size(209, 38);
+            goToForm1.Size = new System.Drawing.Size(167, 38);
             goToForm1.TabIndex = 13;
             goToForm1.Text = "Go to form 1";
             goToForm1.UseVisualStyleBackColor = true;
@@ -69,11 +72,11 @@
             this.sPECIALITYIDDataGridViewTextBoxColumn,
             this.mEDICALEXPERTISEDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pRACTITIONERBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(368, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(425, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(551, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 236);
             this.dataGridView1.TabIndex = 0;
             // 
             // pRACTITIONERIDDataGridViewTextBoxColumn
@@ -116,10 +119,10 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(752, 444);
+            this.Update.Location = new System.Drawing.Point(677, 426);
             this.Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(199, 42);
+            this.Update.Size = new System.Drawing.Size(182, 38);
             this.Update.TabIndex = 6;
             this.Update.Text = "update";
             this.Update.UseVisualStyleBackColor = true;
@@ -128,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 138);
+            this.label1.Location = new System.Drawing.Point(113, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 7;
@@ -138,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 193);
+            this.label2.Location = new System.Drawing.Point(88, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 8;
@@ -147,7 +150,7 @@
             // 
             // practitionerID_input
             // 
-            this.practitionerID_input.Location = new System.Drawing.Point(191, 138);
+            this.practitionerID_input.Location = new System.Drawing.Point(234, 138);
             this.practitionerID_input.Name = "practitionerID_input";
             this.practitionerID_input.Size = new System.Drawing.Size(100, 22);
             this.practitionerID_input.TabIndex = 9;
@@ -155,17 +158,17 @@
             // 
             // medicalExperties_input
             // 
-            this.medicalExperties_input.Location = new System.Drawing.Point(191, 187);
+            this.medicalExperties_input.Location = new System.Drawing.Point(234, 190);
             this.medicalExperties_input.Name = "medicalExperties_input";
             this.medicalExperties_input.Size = new System.Drawing.Size(100, 22);
             this.medicalExperties_input.TabIndex = 10;
             // 
             // showData
             // 
-            this.showData.Location = new System.Drawing.Point(507, 441);
+            this.showData.Location = new System.Drawing.Point(882, 426);
             this.showData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(213, 42);
+            this.showData.Size = new System.Drawing.Size(182, 38);
             this.showData.TabIndex = 11;
             this.showData.Text = "show data";
             this.showData.UseVisualStyleBackColor = true;
@@ -173,20 +176,42 @@
             // 
             // insert
             // 
-            this.insert.Location = new System.Drawing.Point(238, 443);
+            this.insert.Location = new System.Drawing.Point(443, 425);
             this.insert.Margin = new System.Windows.Forms.Padding(4);
             this.insert.Name = "insert";
-            this.insert.Size = new System.Drawing.Size(211, 39);
+            this.insert.Size = new System.Drawing.Size(182, 39);
             this.insert.TabIndex = 12;
             this.insert.Text = "Insert";
             this.insert.UseVisualStyleBackColor = true;
             this.insert.Click += new System.EventHandler(this.insert_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(216, 426);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(182, 38);
+            this.delete.TabIndex = 14;
+            this.delete.Text = "Delete";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // goToForm3
+            // 
+            goToForm3.Location = new System.Drawing.Point(12, 470);
+            goToForm3.Name = "goToForm3";
+            goToForm3.Size = new System.Drawing.Size(167, 38);
+            goToForm3.TabIndex = 15;
+            goToForm3.Text = "Go to form 3";
+            goToForm3.UseVisualStyleBackColor = true;
+            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 633);
+            this.Controls.Add(goToForm3);
+            this.Controls.Add(this.delete);
             this.Controls.Add(goToForm1);
             this.Controls.Add(this.insert);
             this.Controls.Add(this.showData);
@@ -223,5 +248,6 @@
         private System.Windows.Forms.TextBox medicalExperties_input;
         private System.Windows.Forms.Button showData;
         private System.Windows.Forms.Button insert;
+        private System.Windows.Forms.Button delete;
     }
 }
