@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,11 @@ namespace DB
 {
     public partial class Form3 : Form
     {
+
+        // Using the central connection string
+        string connectionString = @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+
         public Form3()
         {
             InitializeComponent();
@@ -27,11 +33,26 @@ namespace DB
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitalDataSet.PRACTITIONER' table. You can move, or remove it, as needed.
-            this.pRACTITIONERTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER);
-            // TODO: This line of code loads data into the 'hospitalDataSet.SPECIALITY' table. You can move, or remove it, as needed.
-            this.sPECIALITYTableAdapter.Fill(this.hospitalDataSet.SPECIALITY);
+            try
+            {
+                this.pRACTITIONERTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER);
+                this.sPECIALITYTableAdapter.Fill(this.hospitalDataSet.SPECIALITY);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Data Load Error: " + ex.Message);
+            }
+        }
 
+
+
+        private void goToForm4_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+
+            
+            this.Hide();
         }
     }
 }

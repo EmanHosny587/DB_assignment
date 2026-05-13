@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.Label sPECIALITY_IDLabel;
             System.Windows.Forms.Label sPECIALITY_NAMELabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.hospitalDataSet = new DB.HospitalDataSet();
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sPECIALITYTableAdapter = new DB.HospitalDataSetTableAdapters.SPECIALITYTableAdapter();
             this.tableAdapterManager = new DB.HospitalDataSetTableAdapters.TableAdapterManager();
+            this.pRACTITIONERTableAdapter = new DB.HospitalDataSetTableAdapters.PRACTITIONERTableAdapter();
             this.sPECIALITYBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.sPECIALITYBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.sPECIALITY_IDTextBox = new System.Windows.Forms.TextBox();
             this.sPECIALITY_NAMETextBox = new System.Windows.Forms.TextBox();
             this.pRACTITIONERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRACTITIONERTableAdapter = new DB.HospitalDataSetTableAdapters.PRACTITIONERTableAdapter();
             this.pRACTITIONERDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKPRACTITIHASASPECIALIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             sPECIALITY_IDLabel = new System.Windows.Forms.Label();
             sPECIALITY_NAMELabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
@@ -68,6 +69,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPRACTITIHASASPECIALIBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sPECIALITY_IDLabel
+            // 
+            sPECIALITY_IDLabel.AutoSize = true;
+            sPECIALITY_IDLabel.Location = new System.Drawing.Point(201, 51);
+            sPECIALITY_IDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sPECIALITY_IDLabel.Name = "sPECIALITY_IDLabel";
+            sPECIALITY_IDLabel.Size = new System.Drawing.Size(85, 13);
+            sPECIALITY_IDLabel.TabIndex = 1;
+            sPECIALITY_IDLabel.Text = "SPECIALITY ID:";
+            // 
+            // sPECIALITY_NAMELabel
+            // 
+            sPECIALITY_NAMELabel.AutoSize = true;
+            sPECIALITY_NAMELabel.Location = new System.Drawing.Point(201, 74);
+            sPECIALITY_NAMELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sPECIALITY_NAMELabel.Name = "sPECIALITY_NAMELabel";
+            sPECIALITY_NAMELabel.Size = new System.Drawing.Size(105, 13);
+            sPECIALITY_NAMELabel.TabIndex = 3;
+            sPECIALITY_NAMELabel.Text = "SPECIALITY NAME:";
             // 
             // hospitalDataSet
             // 
@@ -99,6 +120,10 @@
             this.tableAdapterManager.SPECIALITYTableAdapter = this.sPECIALITYTableAdapter;
             this.tableAdapterManager.UpdateOrder = DB.HospitalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pRACTITIONERTableAdapter
+            // 
+            this.pRACTITIONERTableAdapter.ClearBeforeFill = true;
+            // 
             // sPECIALITYBindingNavigator
             // 
             this.sPECIALITYBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -126,9 +151,34 @@
             this.sPECIALITYBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.sPECIALITYBindingNavigator.Name = "sPECIALITYBindingNavigator";
             this.sPECIALITYBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sPECIALITYBindingNavigator.Size = new System.Drawing.Size(800, 27);
+            this.sPECIALITYBindingNavigator.Size = new System.Drawing.Size(738, 27);
             this.sPECIALITYBindingNavigator.TabIndex = 0;
             this.sPECIALITYBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -136,7 +186,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -145,34 +195,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -180,7 +224,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -189,83 +233,45 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // sPECIALITYBindingNavigatorSaveItem
             // 
             this.sPECIALITYBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.sPECIALITYBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sPECIALITYBindingNavigatorSaveItem.Image")));
             this.sPECIALITYBindingNavigatorSaveItem.Name = "sPECIALITYBindingNavigatorSaveItem";
-            this.sPECIALITYBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.sPECIALITYBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.sPECIALITYBindingNavigatorSaveItem.Text = "Save Data";
             this.sPECIALITYBindingNavigatorSaveItem.Click += new System.EventHandler(this.sPECIALITYBindingNavigatorSaveItem_Click);
-            // 
-            // sPECIALITY_IDLabel
-            // 
-            sPECIALITY_IDLabel.AutoSize = true;
-            sPECIALITY_IDLabel.Location = new System.Drawing.Point(268, 63);
-            sPECIALITY_IDLabel.Name = "sPECIALITY_IDLabel";
-            sPECIALITY_IDLabel.Size = new System.Drawing.Size(102, 16);
-            sPECIALITY_IDLabel.TabIndex = 1;
-            sPECIALITY_IDLabel.Text = "SPECIALITY ID:";
             // 
             // sPECIALITY_IDTextBox
             // 
             this.sPECIALITY_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_ID", true));
-            this.sPECIALITY_IDTextBox.Location = new System.Drawing.Point(402, 60);
+            this.sPECIALITY_IDTextBox.Location = new System.Drawing.Point(302, 49);
+            this.sPECIALITY_IDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.sPECIALITY_IDTextBox.Name = "sPECIALITY_IDTextBox";
-            this.sPECIALITY_IDTextBox.Size = new System.Drawing.Size(100, 22);
+            this.sPECIALITY_IDTextBox.Size = new System.Drawing.Size(76, 20);
             this.sPECIALITY_IDTextBox.TabIndex = 2;
-            // 
-            // sPECIALITY_NAMELabel
-            // 
-            sPECIALITY_NAMELabel.AutoSize = true;
-            sPECIALITY_NAMELabel.Location = new System.Drawing.Point(268, 91);
-            sPECIALITY_NAMELabel.Name = "sPECIALITY_NAMELabel";
-            sPECIALITY_NAMELabel.Size = new System.Drawing.Size(128, 16);
-            sPECIALITY_NAMELabel.TabIndex = 3;
-            sPECIALITY_NAMELabel.Text = "SPECIALITY NAME:";
             // 
             // sPECIALITY_NAMETextBox
             // 
             this.sPECIALITY_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sPECIALITYBindingSource, "SPECIALITY_NAME", true));
-            this.sPECIALITY_NAMETextBox.Location = new System.Drawing.Point(402, 88);
+            this.sPECIALITY_NAMETextBox.Location = new System.Drawing.Point(302, 72);
+            this.sPECIALITY_NAMETextBox.Margin = new System.Windows.Forms.Padding(2);
             this.sPECIALITY_NAMETextBox.Name = "sPECIALITY_NAMETextBox";
-            this.sPECIALITY_NAMETextBox.Size = new System.Drawing.Size(100, 22);
+            this.sPECIALITY_NAMETextBox.Size = new System.Drawing.Size(76, 20);
             this.sPECIALITY_NAMETextBox.TabIndex = 4;
             // 
             // pRACTITIONERBindingSource
             // 
             this.pRACTITIONERBindingSource.DataMember = "PRACTITIONER";
             this.pRACTITIONERBindingSource.DataSource = this.hospitalDataSet;
-            // 
-            // pRACTITIONERTableAdapter
-            // 
-            this.pRACTITIONERTableAdapter.ClearBeforeFill = true;
             // 
             // pRACTITIONERDataGridView
             // 
@@ -276,11 +282,12 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.pRACTITIONERDataGridView.DataSource = this.fKPRACTITIHASASPECIALIBindingSource;
-            this.pRACTITIONERDataGridView.Location = new System.Drawing.Point(142, 144);
+            this.pRACTITIONERDataGridView.Location = new System.Drawing.Point(106, 117);
+            this.pRACTITIONERDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.pRACTITIONERDataGridView.Name = "pRACTITIONERDataGridView";
             this.pRACTITIONERDataGridView.RowHeadersWidth = 51;
             this.pRACTITIONERDataGridView.RowTemplate.Height = 24;
-            this.pRACTITIONERDataGridView.Size = new System.Drawing.Size(496, 175);
+            this.pRACTITIONERDataGridView.Size = new System.Drawing.Size(583, 177);
             this.pRACTITIONERDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -312,17 +319,29 @@
             this.fKPRACTITIHASASPECIALIBindingSource.DataMember = "FK_PRACTITI_HASA_SPECIALI";
             this.fKPRACTITIHASASPECIALIBindingSource.DataSource = this.sPECIALITYBindingSource;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(236, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "go to form 4";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.goToForm4_Click);
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(738, 366);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pRACTITIONERDataGridView);
             this.Controls.Add(sPECIALITY_IDLabel);
             this.Controls.Add(this.sPECIALITY_IDTextBox);
             this.Controls.Add(sPECIALITY_NAMELabel);
             this.Controls.Add(this.sPECIALITY_NAMETextBox);
             this.Controls.Add(this.sPECIALITYBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -367,5 +386,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource fKPRACTITIHASASPECIALIBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }
