@@ -32,6 +32,7 @@
             System.Windows.Forms.Button goToForm1;
             System.Windows.Forms.Button goToForm3;
             System.Windows.Forms.Button button1;
+            System.Windows.Forms.Button dashback;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pRACTITIONERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPECIALITYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +54,7 @@
             goToForm1 = new System.Windows.Forms.Button();
             goToForm3 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            dashback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRACTITIONERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
@@ -79,6 +81,17 @@
             goToForm3.Text = "Go to form 3";
             goToForm3.UseVisualStyleBackColor = false;
             goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            button1.Location = new System.Drawing.Point(33, 177);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(165, 38);
+            button1.TabIndex = 18;
+            button1.Text = "Go to form 4";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -247,17 +260,6 @@
             this.Speciality.TabIndex = 17;
             this.Speciality.TextChanged += new System.EventHandler(this.Speciality_TextChanged);
             // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            button1.Location = new System.Drawing.Point(33, 177);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(165, 38);
-            button1.TabIndex = 18;
-            button1.Text = "Go to form 4";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -272,12 +274,25 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // dashback
+            // 
+            dashback.BackColor = System.Drawing.SystemColors.ScrollBar;
+            dashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dashback.Location = new System.Drawing.Point(33, 224);
+            dashback.Name = "dashback";
+            dashback.Size = new System.Drawing.Size(165, 38);
+            dashback.TabIndex = 28;
+            dashback.Text = "Go to  Dashboard";
+            dashback.UseVisualStyleBackColor = false;
+            dashback.Click += new System.EventHandler(this.dashback_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1472, 648);
+            this.Controls.Add(dashback);
             this.Controls.Add(this.label4);
             this.Controls.Add(button1);
             this.Controls.Add(this.Speciality);

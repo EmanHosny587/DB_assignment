@@ -85,5 +85,13 @@ namespace DB
 
             this.Hide();
         }
+
+        private void dashback_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.Show();
+            this.Hide();
+        }
+    
     }
 }
