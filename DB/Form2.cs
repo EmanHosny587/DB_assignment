@@ -14,7 +14,7 @@ namespace DB
     public partial class Form2 : Form
     {
         string connectionString =
-        @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
+        @"Data Source =.\SQLEXPRESS;Initial Catalog = discu; Integrated Security = True";
         public Form2()
         {
             InitializeComponent();
@@ -163,5 +163,6 @@ namespace DB
         {
 
         }
+
     }
 }

@@ -15,7 +15,7 @@ namespace DB
     {
 
         // Using the central connection string
-        string connectionString = @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=discu;Integrated Security=True";
 
 
         public Form3()

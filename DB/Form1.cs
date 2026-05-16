@@ -9,7 +9,7 @@ namespace DB
     public partial class Form1 : Form
     {
         string connectionString =
-    @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
+    @"Data Source=.\SQLEXPRESS;Initial Catalog=discu;Integrated Security=True";
 
         public Form1()
         {
@@ -190,5 +190,6 @@ namespace DB
             form4.Show();
             this.Hide();
         }
+        
     }
 }
