@@ -8,7 +8,8 @@ namespace DB
     public partial class Form4 : Form
     {
         // Using the central connection string
-        string connectionString = @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
+        string connectionString =
+      @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;TrustServerCertificate=True";
 
         public Form4()
         {
@@ -32,9 +33,9 @@ namespace DB
                     p.PATIENT_ID, 
                     p.CONTACT_HISTORY, 
                     p.DEMOGRAPHIC, 
-                    s.CONSULTATION_ID
+                    c.CONSULTATION_ID
                 FROM PATIENT p 
-                   INNER JOIN IS_SCHEDULED s ON p.PATIENT_ID = s.PATIENT_ID";
+                   INNER JOIN CLINIC_CONSULTATION c ON p.PATIENT_ID = c.PATIENT_ID";
 
                     SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                     DataTable table = new DataTable();

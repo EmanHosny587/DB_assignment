@@ -15,7 +15,8 @@ namespace DB
     {
 
         // Using the central connection string
-        string connectionString = @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=AA;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string connectionString =
+       @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;TrustServerCertificate=True";
 
 
         public Form3()
@@ -35,6 +36,9 @@ namespace DB
         {
             try
             {
+                this.pRACTITIONERTableAdapter.Connection.ConnectionString = connectionString;
+                this.sPECIALITYTableAdapter.Connection.ConnectionString = connectionString;
+
                 this.pRACTITIONERTableAdapter.Fill(this.hospitalDataSet.PRACTITIONER);
                 this.sPECIALITYTableAdapter.Fill(this.hospitalDataSet.SPECIALITY);
             }
@@ -58,21 +62,21 @@ namespace DB
         {
             Form1 form1 = new Form1();
             form1.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void goToForm3_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Form4 form4 = new Form4();
-            //form4.Show();
-            //this.Hide();
+            Form4 form4 = new Form4();
+            form4.Show();
+            this.Close();
         }
 
 
@@ -83,7 +87,7 @@ namespace DB
             form4.Show();
 
 
-            this.Hide();
+            this.Close();
         }
     }
 }

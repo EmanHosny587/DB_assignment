@@ -9,7 +9,7 @@ namespace DB
     public partial class Form1 : Form
     {
         string connectionString =
-    @"Data Source=LAPTOP-N057VS3J\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
+    @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Trust Server Certificate=True";
 
         public Form1()
         {
