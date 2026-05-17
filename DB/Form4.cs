@@ -9,7 +9,7 @@ namespace DB
     {
         // Using the central connection string
         string connectionString =
-      @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;TrustServerCertificate=True";
+     @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public Form4()
         {
