@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label sPECIALITY_IDLabel;
             System.Windows.Forms.Label sPECIALITY_NAMELabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Button goToForm3;
             System.Windows.Forms.Button goToForm1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.Button dashback;
             this.hospitalDataSet = new DB.HospitalDataSet();
             this.sPECIALITYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sPECIALITYTableAdapter = new DB.HospitalDataSetTableAdapters.SPECIALITYTableAdapter();
@@ -57,16 +58,17 @@
             this.sPECIALITY_NAMETextBox = new System.Windows.Forms.TextBox();
             this.pRACTITIONERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRACTITIONERDataGridView = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKPRACTITIHASASPECIALIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             sPECIALITY_IDLabel = new System.Windows.Forms.Label();
             sPECIALITY_NAMELabel = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             goToForm3 = new System.Windows.Forms.Button();
             goToForm1 = new System.Windows.Forms.Button();
+            dashback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPECIALITYBindingNavigator)).BeginInit();
@@ -95,6 +97,39 @@
             sPECIALITY_NAMELabel.Size = new System.Drawing.Size(144, 16);
             sPECIALITY_NAMELabel.TabIndex = 3;
             sPECIALITY_NAMELabel.Text = "SPECIALITY NAME:";
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            button1.Location = new System.Drawing.Point(33, 200);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(186, 38);
+            button1.TabIndex = 21;
+            button1.Text = "Go to form 4";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // goToForm3
+            // 
+            goToForm3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm3.Location = new System.Drawing.Point(33, 125);
+            goToForm3.Name = "goToForm3";
+            goToForm3.Size = new System.Drawing.Size(186, 38);
+            goToForm3.TabIndex = 20;
+            goToForm3.Text = "Go to form 2";
+            goToForm3.UseVisualStyleBackColor = false;
+            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
+            // 
+            // goToForm1
+            // 
+            goToForm1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm1.Location = new System.Drawing.Point(33, 53);
+            goToForm1.Name = "goToForm1";
+            goToForm1.Size = new System.Drawing.Size(186, 38);
+            goToForm1.TabIndex = 19;
+            goToForm1.Text = "Go to form 1";
+            goToForm1.UseVisualStyleBackColor = false;
+            goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
             // 
             // hospitalDataSet
             // 
@@ -301,53 +336,6 @@
             this.pRACTITIONERDataGridView.TabIndex = 5;
             this.pRACTITIONERDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pRACTITIONERDataGridView_CellContentClick);
             // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            button1.Location = new System.Drawing.Point(33, 200);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(186, 38);
-            button1.TabIndex = 21;
-            button1.Text = "Go to form 4";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // goToForm3
-            // 
-            goToForm3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            goToForm3.Location = new System.Drawing.Point(33, 125);
-            goToForm3.Name = "goToForm3";
-            goToForm3.Size = new System.Drawing.Size(186, 38);
-            goToForm3.TabIndex = 20;
-            goToForm3.Text = "Go to form 2";
-            goToForm3.UseVisualStyleBackColor = false;
-            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
-            // 
-            // goToForm1
-            // 
-            goToForm1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            goToForm1.Location = new System.Drawing.Point(33, 53);
-            goToForm1.Name = "goToForm1";
-            goToForm1.Size = new System.Drawing.Size(186, 38);
-            goToForm1.TabIndex = 19;
-            goToForm1.Text = "Go to form 1";
-            goToForm1.UseVisualStyleBackColor = false;
-            goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(347, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(939, 72);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Select from Practitioner filterd by speciality";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "PRACTITIONER_ID";
@@ -374,12 +362,39 @@
             this.fKPRACTITIHASASPECIALIBindingSource.DataMember = "FK_PRACTITI_HASA_SPECIALI";
             this.fKPRACTITIHASASPECIALIBindingSource.DataSource = this.sPECIALITYBindingSource;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(347, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(939, 72);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Select from Practitioner filterd by speciality";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // dashback
+            // 
+            dashback.BackColor = System.Drawing.SystemColors.ScrollBar;
+            dashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dashback.Location = new System.Drawing.Point(33, 273);
+            dashback.Name = "dashback";
+            dashback.Size = new System.Drawing.Size(186, 38);
+            dashback.TabIndex = 27;
+            dashback.Text = "Go to  Dashboard";
+            dashback.UseVisualStyleBackColor = false;
+            dashback.Click += new System.EventHandler(this.dashback_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1475, 649);
+            this.Controls.Add(dashback);
             this.Controls.Add(this.label3);
             this.Controls.Add(button1);
             this.Controls.Add(goToForm3);

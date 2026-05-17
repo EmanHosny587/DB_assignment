@@ -74,9 +74,9 @@ namespace DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.Show();
-            this.Close();
+            //Form4 form4 = new Form4();
+            //form4.Show();
+            //this.Hide();
         }
 
 
@@ -87,7 +87,15 @@ namespace DB
             form4.Show();
 
 
-            this.Close();
+            this.Hide();
         }
+
+        private void dashback_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.Show();
+            this.Hide();
+        }
+    
     }
 }

@@ -14,7 +14,7 @@ namespace DB
     public partial class Form2 : Form
     {
         string connectionString =
-        @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Trust Server Certificate=True";
+        @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         public Form2()
         {
             InitializeComponent();
@@ -163,5 +163,13 @@ namespace DB
         {
 
         }
+
+        private void dashback_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.Show();
+            this.Hide();
+        }
+    
     }
 }

@@ -18,13 +18,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Button button2;
+            System.Windows.Forms.Button goToForm3;
+            System.Windows.Forms.Button goToForm1;
+            System.Windows.Forms.Button dashback;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.Button button2;
-            System.Windows.Forms.Button goToForm3;
-            System.Windows.Forms.Button goToForm1;
             this.iS_SCHEDULEDDataGridView = new System.Windows.Forms.DataGridView();
             this.pATIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitalDataSet = new DB.HospitalDataSet();
@@ -38,12 +39,61 @@
             button2 = new System.Windows.Forms.Button();
             goToForm3 = new System.Windows.Forms.Button();
             goToForm1 = new System.Windows.Forms.Button();
+            dashback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iS_SCHEDULEDDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            button2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.Location = new System.Drawing.Point(29, 214);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(163, 38);
+            button2.TabIndex = 24;
+            button2.Text = "Go to form 3";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // goToForm3
+            // 
+            goToForm3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            goToForm3.Location = new System.Drawing.Point(29, 132);
+            goToForm3.Name = "goToForm3";
+            goToForm3.Size = new System.Drawing.Size(163, 38);
+            goToForm3.TabIndex = 23;
+            goToForm3.Text = "Go to form 2";
+            goToForm3.UseVisualStyleBackColor = false;
+            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
+            // 
+            // goToForm1
+            // 
+            goToForm1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            goToForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            goToForm1.Location = new System.Drawing.Point(29, 53);
+            goToForm1.Name = "goToForm1";
+            goToForm1.Size = new System.Drawing.Size(163, 38);
+            goToForm1.TabIndex = 22;
+            goToForm1.Text = "Go to form 1";
+            goToForm1.UseVisualStyleBackColor = false;
+            goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
+            // 
+            // dashback
+            // 
+            dashback.BackColor = System.Drawing.SystemColors.ScrollBar;
+            dashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dashback.Location = new System.Drawing.Point(29, 278);
+            dashback.Name = "dashback";
+            dashback.Size = new System.Drawing.Size(163, 38);
+            dashback.TabIndex = 26;
+            dashback.Text = "Go to  Dashboard";
+            dashback.UseVisualStyleBackColor = false;
+            dashback.Click += new System.EventHandler(this.dashback_Click);
             // 
             // iS_SCHEDULEDDataGridView
             // 
@@ -64,7 +114,7 @@
             this.iS_SCHEDULEDDataGridView.Name = "iS_SCHEDULEDDataGridView";
             this.iS_SCHEDULEDDataGridView.RowHeadersWidth = 51;
             this.iS_SCHEDULEDDataGridView.RowTemplate.Height = 24;
-            this.iS_SCHEDULEDDataGridView.Size = new System.Drawing.Size(1475, 624);
+            this.iS_SCHEDULEDDataGridView.Size = new System.Drawing.Size(1291, 624);
             this.iS_SCHEDULEDDataGridView.TabIndex = 0;
             this.iS_SCHEDULEDDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.iS_SCHEDULEDDataGridView_CellContentClick);
             // 
@@ -109,8 +159,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(460, 202);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(402, 202);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -121,7 +171,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(673, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(589, 227);
             this.dataGridView1.TabIndex = 3;
             // 
             // pATIENTIDDataGridViewTextBoxColumn
@@ -150,42 +200,6 @@
             this.pATIENTBindingSource1.DataMember = "PATIENT";
             this.pATIENTBindingSource1.DataSource = this.hospitalDataSet;
             // 
-            // button2
-            // 
-            button2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.Location = new System.Drawing.Point(33, 214);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(186, 38);
-            button2.TabIndex = 24;
-            button2.Text = "Go to form 3";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // goToForm3
-            // 
-            goToForm3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            goToForm3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            goToForm3.Location = new System.Drawing.Point(33, 132);
-            goToForm3.Name = "goToForm3";
-            goToForm3.Size = new System.Drawing.Size(186, 38);
-            goToForm3.TabIndex = 23;
-            goToForm3.Text = "Go to form 2";
-            goToForm3.UseVisualStyleBackColor = false;
-            goToForm3.Click += new System.EventHandler(this.goToForm3_Click);
-            // 
-            // goToForm1
-            // 
-            goToForm1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            goToForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            goToForm1.Location = new System.Drawing.Point(33, 53);
-            goToForm1.Name = "goToForm1";
-            goToForm1.Size = new System.Drawing.Size(186, 38);
-            goToForm1.TabIndex = 22;
-            goToForm1.Text = "Go to form 1";
-            goToForm1.UseVisualStyleBackColor = false;
-            goToForm1.Click += new System.EventHandler(this.goToForm1_Click);
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -193,7 +207,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(253, 53);
+            this.label3.Location = new System.Drawing.Point(221, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1167, 72);
             this.label3.TabIndex = 25;
@@ -203,9 +217,10 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1475, 624);
+            this.ClientSize = new System.Drawing.Size(1291, 624);
+            this.Controls.Add(dashback);
             this.Controls.Add(this.label3);
             this.Controls.Add(button2);
             this.Controls.Add(goToForm3);
