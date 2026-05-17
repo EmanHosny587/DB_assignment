@@ -8,7 +8,7 @@ namespace DB
     public partial class Form4 : Form
     {
         // Using the central connection string
-        string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=discu;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-058A3R7\MSSQLSERVER01;Initial Catalog=Hospital_managment;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         public Form4()
         {
